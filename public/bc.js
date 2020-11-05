@@ -28,7 +28,7 @@ const getTop4 = async intValue =>{
         // //but need to add an await from the async function on line33
         const response = await fetch('/api', options);
         const server_json = await response.json()
-        console.log(server_json); 
+        //console.log(server_json); 
 
         //change this url to a local path got the weather endpoint we created
         //and then console log it here 
@@ -38,7 +38,7 @@ const getTop4 = async intValue =>{
         //const weather_api_url = `/weather`;
         const api_response = await fetch(weather_api_url);
         const api_json = await api_response.json();
-        console.log(`From client weather API: ${JSON.stringify(api_json)}`);
+        //console.log(`From client weather API: ${JSON.stringify(api_json)}`);
         //now I have a array of objects (api_json) send back from the server
 
         //creates arrays so we can dynamically change 

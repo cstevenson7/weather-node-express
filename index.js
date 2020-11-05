@@ -81,9 +81,9 @@ app.post('/api', (request,response) => {
     //browser console 
     //console.log(request);
     // to just see the body of the request
-    console.log("Woohoo, I got a request")
+    //console.log("Woohoo, I got a request")
     //this will display on object with lat and lon
-    console.log(request.body);
+    //console.log(request.body);
     const prov_data = request.body;
     //send a response back to the client, an object with some data
     //have to do something in the client to recieve the response back
@@ -106,7 +106,7 @@ app.get('/weather/:provVal', async (request,response) => {
     //turn ir into an array with the split function
     const provVal = request.params.provVal.split(',');
     //console.log(latlon);
-    console.log(`From index.js ${provVal[0]} , ${provVal[1]}`);
+    //console.log(`From index.js ${provVal[0]} , ${provVal[1]}`);
 
     if (provVal[1] =='1' ||  provVal[1] == 1){
         map_object = ab_map;
@@ -127,7 +127,7 @@ app.get('/weather/:provVal', async (request,response) => {
         const weather_api_url = `http://api.openweathermap.org/data/2.5/weather?lat=${coordinates[0]}&lon=${coordinates[1]}&units=metric&appid=${api_key}`
         const weather_response = await fetch(weather_api_url);
         const weather_json = await weather_response.json();
-        console.log(`Weather json from the server: ${JSON.stringify(weather_json)}`);
+        //console.log(`Weather json from the server: ${JSON.stringify(weather_json)}`);
         //now to add another API call, just repeat the three lines above
 
         let current = weather_json.main.temp            
@@ -148,7 +148,7 @@ app.get('/weather/:provVal', async (request,response) => {
         }
         //sort the array of objects by descending order to get the 4 warmest temps
         sortedTemps= arrayOfObjects.sort((a, b) => parseFloat(b.current) - parseFloat(a.current));
-        console.log('Sorted temps', sortedTemps)
+        //console.log('Sorted temps', sortedTemps)
         
     }
     // //sort the array of objects by descending order to get the 4 warmest temps
