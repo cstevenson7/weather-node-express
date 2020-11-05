@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+<title>Weather App</title>
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="body_bc">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"> Looking For Better Weather</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./ab.html">AB</a>
+            </li>
+        </div>
+      </nav> 
+ 
+        <!--Bootstrap Grid for page -->
+        <div class="container_bc">
+            <button type="button" class="btn btn-warning" id="bc_Top4_but" onClick="getTop4('2')">Click for the 4 Warmest Locations in BC</button>           
+    
+            <div class="row" >
+                <!--column1-->
+                <div class="col-sm" id="col1_bc"> 
+                    <!-- City1-->              
+                    <div class="card bg-light mb-3" style="max-width: 18rem;">
+                        <div class="card-header" id="bc_city1"><font color= "gray">Warmest City</font></div>
+                        <div class="card-body">
+                        <h6 class="card-title" id="bc_current1"><font color= "gray">Current Temperature</font></h6> 
+                        <h6 class="card-title" id="bc_description1"><font color= "gray">Current Conditions</font></h6>
+                        <p>Current conditions</p>                                           
+                        </div>
+                    </div>
+                    <!-- City3-->
+                    <div class="card bg-light mb-3" style="max-width: 18rem;">                        
+                        <div class="card-header" id="bc_city3"><font color= "gray">Third Warmest City</font></div>
+                        <div class="card-body">
+                        <h6 class="card-title" id="bc_current3"><font color= "gray">Current Temperature</font></h6>  
+                        <h6 class="card-title" id="bc_description3"><font color= "gray">Current Conditions</font></h6>
+                        <p>Current conditions</p>                                            
+                        </div>
+                    </div>
+                </div>
+
+                <!--column2-->
+                <div class="col-sm" id="col2_bc">           
+                        <!-- City2-->
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header" id="bc_city2"><font color= "gray">Second Warmest City</font></div>
+                            <div class="card-body">
+                            <h6 class="card-title" id="bc_current2"><font color= "gray">Current Temperature</font></h6>
+                            <h6 class="card-title" id="bc_description2"><font color= "gray">Current Conditions</font></h6>
+                            <p>Current conditions</p>                                            
+                            </div>
+                        </div>
+                            <!-- City4-->
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">                        
+                            <div class="card-header" id="bc_city4"><font color= "gray">Fourth Warmest City</font></div>
+                            <div class="card-body">
+                            <h6 class="card-title" id="bc_current4"><font color= "gray">Current Temperature</font></h6> 
+                            <h6 class="card-title" id="bc_description4"><font color= "gray">Current Conditions</font></h6>
+                            <p>Current conditions</p>                                            
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <!-- <button type="button" class="btn btn-warning" id="ab_Top4_map" onClick="getBCMarkers()">See Locations on Map</button> -->
+    </div>
+    <script src = "bc.js"></script>
+
+
+    <!--The div element for the map -->
+    <!-- <div id="map"></div>  -->
+
+    <!-- <script>
+        var locations= [
+            ['Invermere',50.51,-116.03,'https://weather.gc.ca/city/pages/bc-72_metric_e.html'],
+            ['Cranbrook',49.51,-115.77,'https://weather.gc.ca/city/pages/bc-77_metric_e.html'],
+            ['Sparwood',49.73,-114.88,'https://weather.gc.ca/city/pages/bc-52_metric_e.html'],
+            ['Kamlooops',50.67,-120.33,'https://weather.gc.ca/city/pages/bc-45_metric_e.html'],
+            ['Kelowna',49.89, -119.50,'https://weather.gc.ca/city/pages/bc-48_metric_e.html'],
+            ['Penticton',49.50,-119.59,'https://weather.gc.ca/city/pages/bc-84_metric_e.html'],
+            ['Osoyoos', 49.03,-119.47,'https://weather.gc.ca/city/pages/bc-69_metric_e.html'],        
+            ['Revelstoke',51.00, -118.20,'https://weather.gc.ca/city/pages/bc-65_metric_e.html'],
+            ['Valemount',52.83, -119.26,'https://weather.gc.ca/city/pages/bc-13_metric_e.html'],
+            ['Golden', 51.30,-116.96,'https://weather.gc.ca/city/pages/bc-34_metric_e.html'],
+            ['Prince Rupert', 54.32, -130.32,'https://weather.gc.ca/city/pages/bc-57_metric_e.html'],
+            ['Nelson', 49.49,-117.29,'https://weather.gc.ca/city/pages/bc-37_metric_e.html'],
+            ['Vancouver',49.28,-123.12,'https://weather.gc.ca/city/pages/bc-74_metric_e.html'],
+            ['Victoria', 48.43, 123.37,'https://weather.gc.ca/city/pages/bc-74_metric_e.html'],
+            ['Prince George', 53.92,-122.75,'https://weather.gc.ca/city/pages/bc-79_metric_e.html']
+        ];
+
+    </script>
+    This makes the map persistant on the page
+    src="https://maps.googleapis.com/maps/api/js?key=API_KEY_HERE&callback=initMap">-->        
+            
+  <!-- <script defer  
+      src="https://maps.googleapis.com/maps/api/js?key=API_KEY_HERE">
+  </script> --> 
+
+</body>
+</html>

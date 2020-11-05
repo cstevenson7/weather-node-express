@@ -1,0 +1,209 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;    
+}
+
+body.home{
+    background-image: url(../images/bus.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;   
+    /*background-color: aquamarine;*/
+
+     
+}
+
+@media screen and (max-width: 768px) {
+    .body.home{
+        background-image: url(../images/bus_crop.jpg);
+        background-size: cover;
+        background-repeat: repeat; 
+    }
+}
+
+
+
+.header-text {
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    left: 20rem;
+    top: 10rem;
+    color: white;
+}
+
+.h3_ab{
+    text-align: center;
+    margin-top: 15vh;    
+    display: block;
+    font-weight: 600;
+    color: black
+}
+
+@media screen and (max-width: 768px) {
+    .header-text{
+        padding-top: 1%;
+        left: 2rem;
+        top: 2rem;
+        justify-content: auto;
+        font-size: 25px;        
+    }
+  }
+
+#ab_button{
+    margin-left: 78vh;
+    width: 110px;
+}
+
+@media screen and (max-width: 768px) {
+    #ab_button{
+        margin:35vh auto 10vh auto; 
+        display: block;         
+    }
+  }
+
+
+#bc_button{
+    margin-left: 3vw;  
+}
+
+@media screen and (max-width: 768px){
+    #bc_button{
+        margin: 10vh auto 20vh auto;
+        display: block;          
+    }
+  }
+
+
+p{
+    font-size: 11px;
+    color:rgb(224, 168, 0);    
+}
+
+body.body_ab{
+    background-image: url(../images/LakeLoiuse.jpg);
+    background-size: cover;
+}
+
+
+
+body.body_bc{
+    background-image: url(../images/BC6.jpg);
+    background-size: cover; 
+}
+
+/*body.mapAB_BC{
+    margin-top: 2vh;
+    margin-left:20vw;
+    /*background-image: url(../images/map.jpg);
+    background-size: cover;*/
+ /*}*/
+
+.container_ab{
+    height: 80%;  
+    width : 100%;
+    margin-top:3vh;   
+    justify-content:center;   
+}
+
+.container_bc{
+    height:100%;
+    margin-top:3vh;   
+    justify-content:center;   
+}
+
+#col1_hm{ 
+    margin-top:2vh; 
+}
+
+#col2_hm{
+    margin-top: 2vh;
+ }
+
+ #col1_ab{
+    margin-top:7vh;
+    margin-left:25vw;    
+}
+
+#col2_ab{
+    margin-top:7vh;
+    margin-right: 15vw; 
+}
+
+@media screen and (max-width: 768px) {
+    #col1_ab {
+       margin-left:20vw;
+       margin-right:0vw;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    #col2_ab {
+       margin-top:1vh;
+       margin-left:20vw ;
+       margin-right:0vw;
+    }
+  }
+
+#col1_bc{
+    margin-top:7vh;
+    margin-left: 25vw;    
+}
+
+#col2_bc{
+    margin-top:7vh;
+    margin-right: 15vw; 
+}
+
+@media screen and (max-width: 768px) {
+    #col1_bc {
+       margin-left:20vw ;
+       margin-right:0vw;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    #col2_bc {
+       margin-top:1vh;
+       margin-left:20vw ;
+       margin-right:0vw;
+    }
+  }
+#map {   
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+    height: 50vh;  /* The height is 400 pixels */
+    width: 40vw;  /* The width is the width of the web page */
+   }
+
+#info{
+    font-weight: bold;
+
+}
+
+#ab_Top4_but{    
+    margin: 5vh auto auto auto;    
+    display: block;   
+    font-size: 20px;    
+    font-weight: bold;    
+}
+
+#ab_Top4_map{
+    margin: 5vh auto auto auto;    
+    display: block;   
+    font-size: 20px;    
+    font-weight: bold; 
+}
+
+#bc_Top4_but{    
+    margin: 5vh auto auto auto;    
+    display: block;   
+    font-size: 20px;    
+    font-weight: bold;    
+}
+
+
+
+
