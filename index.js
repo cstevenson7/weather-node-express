@@ -132,12 +132,12 @@ app.get('/weather/:provVal', async (request,response) => {
 
         let current = weather_json.main.temp            
         let description = weather_json.weather[0].description
-        //Getting the city from my Map                         
-        values1.push([city,current,description])
+        //Getting the city from my Map                          
+        values1.push([city,coordinates,current,description])
         //need to leave all of this inside the promise
         //or the values list is empty
         //Create a array of objects with these attributes
-        let keys = ['city','current','description'];
+        let keys = ['city','coordinates','current','description'];
         let arrayOfObjects = [];            
         for(let i=0; i<values1.length; i++){        
             let obj = {};                    

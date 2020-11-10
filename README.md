@@ -8,6 +8,14 @@ reported by OpenWeather. 11 selected Alberta location and 15 selected BC locatio
 # if you get [object Object]
 need to do this console.log(`From client both API's: ${JSON.stringify(api_json)}`);
 
+# to get degree symbol -  alt 0176
+
+# changed all innerHTML to textContent from my original code
+from developer.mozilla.org
+Element.innerHTML returns HTML, as its name indicates. Sometimes people use innerHTML
+to retrieve or write text inside an element,  but textContent has better performance
+because its value is not parsed as HTML. Moreover, using textContent can prevent XSS attacks.
+
 # to deploy on heroku with the CLI (command line interface)
 
 need to change the port to this:

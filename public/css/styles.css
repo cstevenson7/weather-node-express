@@ -169,14 +169,15 @@ body.body_bc{
        margin-right:0vw;
     }
   }
-#map {   
+
+/* #checkinMap {   
     margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3vh;
     height: 50vh;  /* The height is 400 pixels */
     width: 40vw;  /* The width is the width of the web page */
-   }
+   } */
 
 #info{
     font-weight: bold;

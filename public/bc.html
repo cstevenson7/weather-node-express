@@ -4,6 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Leaflet code -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin=""
+    />    
+    <script
+        src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""
+    ></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+
+    <style>
+        #checkinMap {
+        height: 340px;
+        width: 500px;
+        margin-top: 5vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3vh;
+        }
+    </style>
+
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
@@ -35,7 +63,7 @@
  
         <!--Bootstrap Grid for page -->
         <div class="container_bc">
-            <button type="button" class="btn btn-warning" id="bc_Top4_but" onClick="getTop4('2')">Click for the 4 Warmest Locations in BC</button>           
+            <button type="button" class="btn btn-warning" id="bc_Top4_but" >Current Conditions for the 4 Warmest Locations in BC</button>           
     
             <div class="row" >
                 <!--column1-->
@@ -46,7 +74,7 @@
                         <div class="card-body">
                         <h6 class="card-title" id="bc_current1"><font color= "gray">Current Temperature</font></h6> 
                         <h6 class="card-title" id="bc_description1"><font color= "gray">Current Conditions</font></h6>
-                        <p>Current conditions</p>                                           
+                                                                
                         </div>
                     </div>
                     <!-- City3-->
@@ -55,7 +83,7 @@
                         <div class="card-body">
                         <h6 class="card-title" id="bc_current3"><font color= "gray">Current Temperature</font></h6>  
                         <h6 class="card-title" id="bc_description3"><font color= "gray">Current Conditions</font></h6>
-                        <p>Current conditions</p>                                            
+                                                                   
                         </div>
                     </div>
                 </div>
@@ -68,7 +96,7 @@
                             <div class="card-body">
                             <h6 class="card-title" id="bc_current2"><font color= "gray">Current Temperature</font></h6>
                             <h6 class="card-title" id="bc_description2"><font color= "gray">Current Conditions</font></h6>
-                            <p>Current conditions</p>                                            
+                                                                      
                             </div>
                         </div>
                             <!-- City4-->
@@ -77,13 +105,14 @@
                             <div class="card-body">
                             <h6 class="card-title" id="bc_current4"><font color= "gray">Current Temperature</font></h6> 
                             <h6 class="card-title" id="bc_description4"><font color= "gray">Current Conditions</font></h6>
-                            <p>Current conditions</p>                                            
+                                                                
                             </div>
                         </div>
                 </div>
         </div>
         <!-- <button type="button" class="btn btn-warning" id="ab_Top4_map" onClick="getBCMarkers()">See Locations on Map</button> -->
     </div>
+    <div id="checkinMap"></div>
     <script src = "bc.js"></script>
 
 
