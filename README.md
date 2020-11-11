@@ -57,3 +57,5 @@ git push heroku master
 
 Heroku automatically redeploys the app once you push to heroku master = these changes DO NOT push to github -  need to do a git push origin master
 
+# to pull down master to local after merging test branch
+git pull --rebase origin master 
