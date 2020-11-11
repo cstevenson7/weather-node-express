@@ -2,7 +2,7 @@
 Displays the warmest 4 locations in Alberta or BC based on current conditions
 reported by OpenWeather API.Used Leaflet create markers for the warmest locations. 
 11 selected Alberta location and 15 selected BC locations
-Node.js, Express, node-fetch, dotenv
+Node.js, Express, node-fetch, dotenv, Bootstrap
 http://localhost:3000
 
 # if you get [object Object]
